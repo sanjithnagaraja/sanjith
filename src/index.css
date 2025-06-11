@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+
+/* to prevent html body margin effect on dark mode */
+  @layer base {
+  html, body {
+    @apply bg-[rgb(var(--color-bg-primary))] text-[rgb(var(--color-text-base))] m-0 p-0 overflow-x-hidden;
+  }
+}
+
+html, body {
+  overscroll-behavior: none;
+}
+
+
+body {
+  overscroll-behavior-y: none;
+}
+
+
+  
+
+  @layer base {
+    :root {
+      --color-primary: 255 255 255;           /* white (Tailwind: white or gray-50) */
+      --color-secondary: 248 250 252;         /* Tailwind: slate-50 */
+      --color-text-base: 0 0 0;               /* black (Tailwind: black or gray-900) */
+      --color-text-secondary: 75 85 99;       /* Tailwind: slate-800 or gray-800 */
+      --color-bg-primary: 249 250 251;        /* white (Tailwind: white or gray-50) */
+    }
+  
+    .dark {
+      --color-primary: 0 0 0;                 /* black (Tailwind: black or gray-900) */
+      --color-secondary: 248 250 252;            /* */
+      --color-text-base: 255 255 255;         /* white (Tailwind: white) */
+      --color-text-secondary: 255 255 255;        
+      --color-bg-primary: 249 250 251;           /* Tailwind: slate-900 */
+    }
+  }
+  
+  
+  
