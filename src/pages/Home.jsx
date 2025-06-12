@@ -18,9 +18,9 @@ function Home() {
         <div className="flex lg:flex-col lg:w-1/2 lg:h-full justify-center items-end font-poppins gap-2">
             <div className="w-[500px] h-auto "> 
             <div className="flex flex-col gap-2 text-center w-full p-2">
-                <p className="text-2xl font-normal text-gray-600/85">Hello, I'm</p>
-                <p className="text-7xl font-bold text-textBase/85">Sanjith</p>
-                <p className="pt-1 text-4xl font-normal text-gray-600/65">Frontend Developer</p>
+                <p className=" text-xl md:text-2xl font-normal text-gray-600/85">Hello, I'm</p>
+                <p className="text-6xl md:text-7xl font-bold text-textBase/85">Sanjith</p>
+                <p className="pt-1  text-3xl md:text-4xl font-normal text-gray-600/65">Frontend Developer</p>
             </div>
             <div className="flex flex-row gap-3 font-medium justify-center p-2">
                 <button className="rounded-3xl border-solid border-2 border-textBase text-sm font-normal text-textBase/85 px-4 py-3 hover:bg-textBase/85 hover:text-primary/85 transition-all duration-500">Download CV</button>
@@ -44,7 +44,7 @@ function Home() {
 
 
         <div className="group lg:w-1/2 lg:h-full flex flex-col justify-center items-start bg-opacity-75 p-5 pt-10 lg:pt-0 ">
-                <div className="relative w-96 h-96 m-0 rounded-full z-5 bg-slate-50/85  flex justify-center items-center border-2 border-solid  group-hover:border-slate-50/85 group-hover:border-2 group-hover:border-solid  border-zinc-800/85 md:group-hover:border-zinc-800/85 transition-all duration-500">
+                <div className="relative w-80 h-80 md:w-96 md:h-96 m-0 rounded-full z-5 bg-slate-50/85  flex justify-center items-center border-2 border-solid  group-hover:border-slate-50/85 group-hover:border-2 group-hover:border-solid  border-zinc-800/85 md:group-hover:border-zinc-800/85 transition-all duration-500">
                     <img
                         src={myPic}
                         alt="Sanjith"

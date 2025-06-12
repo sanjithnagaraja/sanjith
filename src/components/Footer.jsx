@@ -39,9 +39,9 @@ function Footer() {
         
 
         <div className="flex gap-2 justify-center w-full pt-10 p-2">
-          <p className="text-center text-sm font-medium text-textBase/75">Copyright  &copy; 2025 Sanjith </p>
-          <p className="text-center text-sm font-medium text-textBase/75">|</p>
-          <p className="text-center text-sm font-medium text-textBase/75">All rights Reserved</p>
+          <p className="text-center text-xs xl:text-sm font-medium text-textBase/75">Copyright  &copy; 2025 Sanjith </p>
+          <p className="text-center text-xs xl:text-sm font-medium text-textBase/75">|</p>
+          <p className="text-center text-xs xl:text-sm font-medium text-textBase/75">All rights Reserved</p>
         </div>
     </section>
   )
