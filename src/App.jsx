@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -9,7 +8,6 @@ import Test from './pages/Test'
 import Experience from './pages/Experience'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>

@@ -71,7 +71,7 @@ const projects = [
         
 
         {projects.map((project, index) => (
-          <div key={index} className="lg:w-[400px] h-auto rounded-2xl border-2 border-solid border-textBase/25 p-7 flex flex-col space-y-5">
+          <div key={index} className="md:w-[80%] lg:w-[400px] h-auto rounded-2xl border-2 border-solid border-textBase/25 p-7 flex flex-col space-y-5">
             <h3 className="text-2xl font-light text-center  text-gray-600/85 dark:text-textBase/45">
               {project.title[0]}<br /><span className="text-3xl font-light text-center text-textBase/85 dark:text-textBase/75">{project.title[1]}</span>
             </h3><div className="overflow-hidden rounded-xl mt-4 w-full h-52">

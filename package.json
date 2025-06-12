@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@heroicons/react": "^2.2.0",
     "autoprefixer": "^10.4.21",
+    "emailjs": "^4.0.3",
     "feather-icons": "^4.29.2",
     "gsap": "^3.13.0",
     "lucide-react": "^0.508.0",

@@ -11,7 +11,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 function Home() {
 
   return (
-    <section id="home" className="flex flex-col-reverse lg:flex-row gap-5 lg:gap-2 w-full h-[800px] xl:h-screen bg-primary/5  dark:bg-primary/85 justify-end items-center text-textBase">
+    <section id="home" className="flex flex-col-reverse lg:flex-row gap-5 lg:gap-2 w-full h-[700px] xl:h-screen bg-primary/5  dark:bg-primary/85 justify-end items-center text-textBase">
 
 
         

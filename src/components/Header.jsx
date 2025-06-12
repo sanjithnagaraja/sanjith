@@ -40,7 +40,7 @@ function Header() {
         ))}
       </div>
 
-      <div className="hidden md:flex absolute -right-6 lg:right-0 lg:py-1">
+      <div className="hidden md:flex absolute -right-6  lg:-right-3 lg:py-1">
         <ThemeToggle />
       </div>
 
