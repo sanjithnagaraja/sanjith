@@ -32,6 +32,10 @@ export default {
         fadeIn: 'fadeIn 0.5s ease-in forwards',
         fadeOut: 'fadeOut 0.5s ease-out forwards',
       },
+      screens: {
+                'xs': '300px',  // Custom breakpoint for 300px+
+                'sm-xs': '400px' // Custom breakpoint for 400px+
+      }
     },
   },
   plugins: [],

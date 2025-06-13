@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import {mail,whatsapp} from '../assets/icons/index';
 import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast';
 
 function CopyText({ text }) {
 
@@ -37,6 +38,14 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const { user_name, user_email, message } = form.current;
+
+      if (!user_name.value.trim() || !user_email.value.trim() || !message.value.trim()) {
+        toast.error('Please fill in all the fields.');
+        return;
+      }
+
+
     emailjs
       .sendForm('service_rih6am6', 'template_eqlq0sp', form.current, {
         publicKey: 'QzsptgdZFjee98ogE',
@@ -44,12 +53,14 @@ function Contact() {
       .then(
         (result) => {
           console.log('SUCCESS!');
+          toast.success('Email sent successfully!');
           console.log(result.text);
           form.current.reset();
           
         },
         (error) => {
           console.log('FAILED...', error.text);
+          toast.error('Failed to send email. Please try again.');
         },
       );
   };
@@ -96,6 +107,7 @@ function Contact() {
                 </div>
           </div>
         </div>
+        <Toaster position="bottom-center" reverseOrder={false} />
     
     </section>
   );

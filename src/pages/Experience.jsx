@@ -22,8 +22,13 @@ function Experience() {
                 .map((skill, index) => (
                   <div key={index} className="flex items-center md:gap-3">
                     <div className="flex items-center md:pl-10">
-                      <img src={skill.imageUrl} alt={skill.name} className="w-7 h-7 md:w-6 md:h-6 object-contain" />
-                    </div>
+                      {
+                      skill.name==="TailwindCSS"
+                        ?
+                        <img src={skill.imageUrl} alt={skill.name} className="w-7 h-7 md:w-6 md:h-6 object-contain xs:scale-150 sm-xs:scale-100" />
+                        :
+                        <img src={skill.imageUrl} alt={skill.name} className="w-7 h-7 md:w-6 md:h-6 object-contain" />
+                      }                    </div>
                     <div className="flex-col p-2 gap-1">
                       <p className="text-sm font-medium text-textBase/85">{skill.name}</p>
                       <p className="text-xs font-light text-textSecondary/50 dark:text-textSecondary/25">{skill.level}</p>

@@ -13,11 +13,12 @@ import gobigif from '../assets/projects/gobigif.gif'
 
 
 function Projects() {
+ const [fullscreenImg, setFullscreenImg] = useState(null);
 
 const projects = [
   {
     title: ["MERN Stack", "Ecommerce Site"],
-    description: "🛒 An offline e-commerce-like billing system tailored for hardware stores, built using the MERN stack and Electron. Features include customer and item management, invoice creation, and exportable PDFs — optimized for local desktop use without internet dependency.",
+    description: "🛒 A local-first billing system for hardware stores, built using the MERN stack and Electron. It supports customer/item management, invoice creation, and PDF exports — optimized for offline use with a full-stack architecture.",
     image: mernEC,
     tech: [react, nodejs, express, mongodb],
     links: {
@@ -27,7 +28,7 @@ const projects = [
   },
   {
     title: ["React, LokiJS & ElectronJS", "Offline Billing System"],
-    description: "🧾 A desktop-based POS system built with React, Electron, and LokiJS. Enables seamless invoice generation, real-time item/customer updates, and PDF printing — fully offline, lightweight, and ideal for small businesses.",
+    description: "🧾 A lightweight POS desktop app using React, Electron, and LokiJS. Enables real-time item tracking, customer records, and invoice PDF generation — fully offline, fast, and ideal for small businesses needing simple billing.",
     image: posSystem,
     tech: [react, electron, "LokiJS"],
     links: {
@@ -36,8 +37,8 @@ const projects = [
     }
   },
   {
-    title: ["React & Three.js", "3D Developer Portfolio"],
-    description: "🌐 An interactive 3D portfolio using React and Three.js to showcase skills in web-based 3D graphics. The project explores camera animations, lighting, model integration, and responsive design using Three.js in React.",
+    title: ["React & Three.js", "3D  Portfolio"],
+    description: "🌐 A dynamic portfolio built using React and Three.js. Features 3D models, animations, and camera movement to present web dev skills in an engaging way. Optimized for desktop, mobile, and responsive screen sizes.",
     image: Portfolio1,
     tech: [react, threejs],
     links: {
@@ -47,12 +48,22 @@ const projects = [
   },
   {
     title: ["React & Tailwind CSS", "Static Studio Website"],
-    description: "🎨 A visually engaging static website built using React and Tailwind CSS, featuring both scroll-based sections and router-based navigation. Integrated with Spline 3D scenes to enhance visual storytelling and user interaction — optimized for modern design presentation.",
+    description: "🎨 A static site created with React and Tailwind CSS. Combines modern layout, smooth scroll, router navigation, and Spline 3D visuals for creative presentation — ideal for personal branding or studio portfolios.",
     image: gobigif,
     tech: [react, tailwindcss],
     links: {
       video: "https://gobistudio.pages.dev/",
       note: "An independently developed project exploring advanced front-end design patterns, routing, and 3D integration using Spline."
+    }
+  },
+  {
+    title: ["React & Tailwind CSS", "Personal Portfolio"],
+    description: "🧑‍💻 A clean developer portfolio with React and Tailwind CSS. Includes light/dark mode, scroll-based sections, responsive layout, and EmailJS integration — styled using a minimal palette with focus on UI clarity.",
+    image: Portfolio1,
+    tech: [react, tailwindcss],
+    links: {
+      video: "https://your-website-link.com/react-portfolio",
+      note: "A fully responsive and interactive personal portfolio showcasing developer skills and project highlights."
     }
   },
 ];
@@ -75,10 +86,11 @@ const projects = [
             <h3 className="text-2xl font-light text-center  text-gray-600/85 dark:text-textBase/45">
               {project.title[0]}<br /><span className="text-3xl font-light text-center text-textBase/85 dark:text-textBase/75">{project.title[1]}</span>
             </h3><div className="overflow-hidden rounded-xl mt-4 w-full h-52">
-              <img
+             <img
                 src={project.image}
                 alt={project.title}
                 className="w-full h-full object-contain transition-transform duration-300 ease-in-out hover:scale-110"
+                onClick={() => setFullscreenImg(project.image)} // open fullscreen on click
               />
             </div>
 
@@ -105,7 +117,20 @@ const projects = [
             <p className="text-sm text-textBase/85 mt-2">{project.links.note}</p>}
           </div>
         ))}
-      
+       {fullscreenImg && (
+        <div
+          className="fixed inset-0 bg-black/80 flex justify-center items-center z-50 cursor-zoom-out p-4"
+          onClick={() => setFullscreenImg(null)}
+        >
+          <div className="max-w-[80vw] max-h-[80vh]">
+            <img
+              src={fullscreenImg}
+              alt="Enlarged project"
+              className="w-full h-full object-contain rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      )}
 
         
       </div>
