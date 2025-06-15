@@ -6,6 +6,7 @@ import myPic from '../assets/my.png';
 // import { github, linkedin } from "../assets/icons";
 // import linkedin1 from '../assets/icons/linkedin1.svg';
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { Link } from 'react-scroll';
 
 
 function Home() {
@@ -23,8 +24,22 @@ function Home() {
                 <p className="pt-1  text-3xl md:text-4xl font-normal text-gray-600/65">Frontend Developer</p>
             </div>
             <div className="flex flex-row gap-3 font-medium justify-center p-2">
-                <button className="rounded-3xl border-solid border-2 border-textBase text-sm font-normal text-textBase/85 px-4 py-3 hover:bg-textBase/85 hover:text-primary/85 transition-all duration-500">Download CV</button>
-                <button className="rounded-3xl bg-textBase/85 border-solid border-2 border-textBase/85 text-sm font-normal text-primary/85 px-4 py-2 hover:bg-primary/5 hover:text-textBase/85 transition-all duration-500">Contact Info</button>
+            <a
+              href="/Sanjith - Resume.pdf"
+              download
+              className="rounded-3xl border-solid border-2 border-textBase text-sm font-normal text-textBase/85 px-4 py-3 hover:bg-textBase/85 hover:text-primary/85 transition-all duration-500"
+            >
+                Download CV
+              </a>                
+              <Link
+                  to="contact"
+                  smooth={true}
+                  duration={600}
+                  offset={-70}
+                  className="rounded-3xl bg-textBase/85 border-solid border-2 border-textBase/85 text-sm font-normal text-primary/85 px-4 py-3 hover:bg-primary/5 hover:text-textBase/85 transition-all duration-500"
+                >
+                  Contact Info
+                </Link>
             </div>
             <div className="flex justify-center gap-5 pt-1">
                  {/* LinkedIn */}
