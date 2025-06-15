@@ -49,14 +49,14 @@ function About() {
             <div className="w-full lg:w-1/2 border-solid border-2 border-textBase/45 rounded-3xl p-5 flex flex-col items-center transition-all">
               <img src={isDark? badgeD: badge} alt="experience" className="w-8 h-8 object-contain" />
               <p className="text-2xl text-textBase/85 font-bold pt-2 hover:scale-105 transition-all duration-300">Experience</p>
-              <p className="text-lg font-light text-textBase/65 dark:text-gray-600/85">As a Freelancer</p>
-              <p className="text-lg font-light text-textBase/65 dark:text-gray-600/85">Frontend Development</p>
+              <p className="text-lg font-light text-textBase/65 text-center dark:text-gray-600/85">As a Freelancer</p>
+              <p className="text-lg font-light text-textBase/65 text-center dark:text-gray-600/85">Frontend Development</p>
             </div>
-            <div className="w-full lg:w-1/2 border-solid border-2 border-textBase/45 rounded-3xl p-5 flex flex-col items-center">
+            <div className="w-full lg:w-1/2 border-solid border-2 border-textBase/45 rounded-3xl py-5 sm-xs:py-5 sm-xs:p-5 flex flex-col items-center">
               <img src={isDark? bookD: book} alt="experience" className="w-8 h-8 object-contain" />
               <p className="text-2xl text-textBase/85 font-bold pt-2 hover:scale-105 transition-all duration-300">Education</p>
-              <p className="text-lg font-light text-textBase/65 dark:text-gray-600/85">Pursuing HND in IT</p>
-              <p className="text-lg font-light text-textBase/65 dark:text-gray-600/85">Self-Taught MERN Developer</p>
+              <p className="text-lg font-light text-textBase/65 text-center dark:text-gray-600/85">Pursuing HND in IT</p>
+              <p className="text-lg font-light text-textBase/65 text-center dark:text-gray-600/85">Self-Taught MERN Developer</p>
             </div>
           </div>
 
