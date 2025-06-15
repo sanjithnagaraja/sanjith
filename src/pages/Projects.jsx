@@ -6,7 +6,8 @@ import book from '../assets/about/book.png';
 import bookD from '../assets/about/bookD.png';
 import { BookOpen } from 'react-feather';
 import { electron,react,nodejs,express,mongodb,threejs, tailwindcss } from "../assets/icons";
-import Portfolio1 from '../assets/projects/portfolio.png'
+import Portfolio1 from '../assets/projects/portfolio.png';
+import Portfolio3D from '../assets/projects/3D.png'
 import posSystem from '../assets/projects/posgif.gif'
 import mernEC from '../assets/projects/mernECgif.gif'
 import gobigif from '../assets/projects/gobigif.gif'
@@ -39,7 +40,7 @@ const projects = [
   {
     title: ["React & Three.js", "3D  Portfolio"],
     description: "🌐 A dynamic portfolio built using React and Three.js. Features 3D models, animations, and camera movement to present web dev skills in an engaging way. Optimized for desktop, mobile, and responsive screen sizes.",
-    image: Portfolio1,
+    image: Portfolio3D,
     tech: [react, threejs],
     links: {
       video: "https://your-website-link.com/3d-portfolio",
