@@ -42,7 +42,7 @@ const projects = [
   {
     title: ["React & Three.js", "3D  Portfolio"],
     description: "🌐 A dynamic portfolio built using React and Three.js. Features 3D models, animations, and camera movement to present web dev skills in an engaging way. Optimized for desktop, mobile, and responsive screen sizes.",
-    image: Portfolio1,
+    image: Portfolio3D,
     tech: [react, threejs],
     links: {
       video: "https://github.com/player127-monster/portfolio",
