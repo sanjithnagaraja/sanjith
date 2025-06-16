@@ -23,9 +23,10 @@ const projects = [
     image: mernEC,
     tech: [react, nodejs, express, mongodb],
     links: {
-      video: "https://your-website-link.com/mern-ecommerce",
+      video: "https://github.com/player127-monster/ecommerce",
       note: "A foundational full-stack learning project accelerated through YouTube tutorials."
-    }
+    },
+    link:true
   },
   {
     title: ["React, LokiJS & ElectronJS", "Offline Billing System"],
@@ -35,17 +36,19 @@ const projects = [
     links: {
       video: "https://your-website-link.com/offline-billing",
       note: "Source code and installer kept private due to project confidentiality."
-    }
+    },
+    link:false
   },
   {
     title: ["React & Three.js", "3D  Portfolio"],
     description: "🌐 A dynamic portfolio built using React and Three.js. Features 3D models, animations, and camera movement to present web dev skills in an engaging way. Optimized for desktop, mobile, and responsive screen sizes.",
-    image: Portfolio3D,
+    image: Portfolio1,
     tech: [react, threejs],
     links: {
-      video: "https://your-website-link.com/3d-portfolio",
+      video: "https://github.com/player127-monster/portfolio",
       note: "An experimental 3D web experience guided by ChatGPT and YouTube resources."
-    }
+    },
+    link:true
   },
   {
     title: ["React & Tailwind CSS", "Static Studio Website"],
@@ -55,7 +58,8 @@ const projects = [
     links: {
       video: "https://gobistudio.pages.dev/",
       note: "An independently developed project exploring advanced front-end design patterns, routing, and 3D integration using Spline."
-    }
+    },
+    link:true
   },
   {
     title: ["React & Tailwind CSS", "Personal Portfolio"],
@@ -65,7 +69,8 @@ const projects = [
     links: {
       video: "https://your-website-link.com/react-portfolio",
       note: "A fully responsive and interactive personal portfolio showcasing developer skills and project highlights."
-    }
+    },
+    link:false
   },
 ];
 
@@ -108,7 +113,7 @@ const projects = [
               ))}
             </div>
             {project.links.video && (
-              <a href={project.links.video} target="_blank" rel="noopener noreferrer" className="text-blue-400/85 block mt-4">
+              project.link && <a href={project.links.video} target="_blank" rel="noopener noreferrer" className="text-blue-400/85 block mt-4">
                 🔗 Visit project
               </a>
             )}
