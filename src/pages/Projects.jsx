@@ -11,6 +11,7 @@ import Portfolio3D from '../assets/projects/3d.png'
 import posSystem from '../assets/projects/posgif.gif'
 import mernEC from '../assets/projects/mernECgif.gif'
 import gobigif from '../assets/projects/gobigif.gif'
+import PersonalPortfolio from '../assets/projects/127-.gif'
 
 
 function Projects() {
@@ -64,7 +65,7 @@ const projects = [
   {
     title: ["React & Tailwind CSS", "Personal Portfolio"],
     description: "🧑‍💻 A clean developer portfolio with React and Tailwind CSS. Includes light/dark mode, scroll-based sections, responsive layout, and EmailJS integration — styled using a minimal palette with focus on UI clarity.",
-    image: Portfolio1,
+    image: PersonalPortfolio,
     tech: [react, tailwindcss],
     links: {
       video: "https://your-website-link.com/react-portfolio",
