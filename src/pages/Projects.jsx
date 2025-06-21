@@ -19,7 +19,7 @@ function Projects() {
 const projects = [
   {
     title: ["MERN Stack", "Ecommerce Site"],
-    description: "🛒 A local-first billing system for hardware stores, built using the MERN stack and Electron. It supports customer/item management, invoice creation, and PDF exports — optimized for offline use with a full-stack architecture.",
+    description: "🛍️ A dynamic full-stack web app using the MERN stack. Includes JWT auth, Stripe payments, and an admin panel. Users can manage carts, leave reviews, and reset passwords. Developed as a capstone project to demonstrate end-to-end full-stack development.",
     image: mernEC,
     tech: [react, nodejs, express, mongodb],
     links: {
