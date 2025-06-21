@@ -22,7 +22,7 @@ import {
     tailwindcss,
     linkedin,
     contact,
-    sql,
+    mysql,
 } from '../assets/icons';
 
 export const skills = [
@@ -106,8 +106,8 @@ export const skills = [
         type:"pl",
     },
     {
-        imageUrl:sql,
-        name:"SQL",
+        imageUrl:mysql,
+        name:"MySQL",
         level:"Intermediate",
         type:"Version Control",
     },
