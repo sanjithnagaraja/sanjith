@@ -5,13 +5,15 @@ import badgeD from '../assets/about/badgeD.png';
 import book from '../assets/about/book.png';
 import bookD from '../assets/about/bookD.png';
 import { BookOpen } from 'react-feather';
-import { electron,react,nodejs,express,mongodb,threejs, tailwindcss } from "../assets/icons";
+import { electron,react,nodejs,express,mongodb,threejs, tailwindcss, github } from "../assets/icons";
 import Portfolio1 from '../assets/projects/portfolio.png';
 import Portfolio3D from '../assets/projects/3d.png'
 import posSystem from '../assets/projects/posgif.gif'
 import mernEC from '../assets/projects/mernECgif.gif'
 import gobigif from '../assets/projects/gobigif.gif'
 import PersonalPortfolio from '../assets/projects/127-.gif'
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+
 
 
 function Projects() {
@@ -20,11 +22,12 @@ function Projects() {
 const projects = [
   {
     title: ["MERN Stack", "Ecommerce Site"],
-    description: "🛍️ A dynamic full-stack web app using the MERN stack. Includes JWT auth, Stripe payments, and an admin panel. Users can manage carts, leave reviews, and reset passwords. Developed as a capstone project to demonstrate end-to-end full-stack development.",
+    description: "🛍️ A full-stack web app built with the MERN stack. Features include JWT auth, Stripe payments, cart management, admin panel, and user reviews — designed as a capstone project focused on clean, scalable full-stack architecture.",
     image: mernEC,
     tech: [react, nodejs, express, mongodb],
     links: {
-      video: "https://github.com/player127-monster/ecommerce",
+      website: false,
+      github:"https://github.com/player127-monster/ecommerce",
       note: "A foundational full-stack learning project accelerated through YouTube tutorials."
     },
     link:true
@@ -35,7 +38,8 @@ const projects = [
     image: posSystem,
     tech: [react, electron, "LokiJS"],
     links: {
-      video: "https://your-website-link.com/offline-billing",
+      website: false,
+      github:false,
       note: "Source code and installer kept private due to project confidentiality."
     },
     link:false
@@ -46,7 +50,8 @@ const projects = [
     image: Portfolio3D,
     tech: [react, threejs],
     links: {
-      video: "https://github.com/player127-monster/portfolio",
+      website: false,
+      github:"https://github.com/player127-monster/portfolio",
       note: "An experimental 3D web experience guided by ChatGPT and YouTube resources."
     },
     link:true
@@ -57,7 +62,8 @@ const projects = [
     image: gobigif,
     tech: [react, tailwindcss],
     links: {
-      video: "https://gobistudio.pages.dev/",
+      website: "https://gobistudio.pages.dev/",
+      github:"https://github.com/player127-monster/gobi_studio",
       note: "An independently developed project exploring advanced front-end design patterns, routing, and 3D integration using Spline."
     },
     link:true
@@ -68,7 +74,8 @@ const projects = [
     image: PersonalPortfolio,
     tech: [react, tailwindcss],
     links: {
-      video: "https://your-website-link.com/react-portfolio",
+      website: "https://sanjith.vercel.app/",
+      github:false,
       note: "A fully responsive and interactive personal portfolio showcasing developer skills and project highlights."
     },
     link:false
@@ -113,10 +120,20 @@ const projects = [
                 </span>
               ))}
             </div>
-            {project.links.video && (
-              project.link && <a href={project.links.video} target="_blank" rel="noopener noreferrer" className="text-blue-400/85 block mt-4">
-                🔗 Visit project
-              </a>
+            {(
+               
+              <div className="flex md:flex-row flex-col justify-between">
+                {project.links.website && <a href={project.links.website} target="_blank" rel="noopener noreferrer" className="py-2 px-2 w-[60%] md:w-auto md:pr-3 rounded-full bg-primary/0 text-textBase hover:bg-textBase/85 hover:text-primary/85 transition-colors mt-2">
+                  🔗 View project
+                </a>}
+
+                {project.links.github && <a href={project.links.github} target="_blank" rel="noopener noreferrer"
+                  className="py-2 px-2 rounded-full w-[60%] md:w-auto bg-primary/0 text-textBase hover:bg-textBase/85 hover:text-primary/85 transition-colors mt-2">
+                  <div className="flex gap-2 ">
+                    <FaGithub className="w-6 h-6" /><span> Visit project</span>
+                  </div>
+                </a>}
+              </div>
             )}
             {project.links.note==="Source code and installer kept private due to project confidentiality."? 
             <p className="text-sm text-textBase/65 mt-2">{project.links.note}</p>
