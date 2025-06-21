@@ -23,6 +23,7 @@ import {
     linkedin,
     contact,
     mysql,
+    php,
 } from '../assets/icons';
 
 export const skills = [
@@ -103,6 +104,12 @@ export const skills = [
         imageUrl:csharp,
         name:"C-Sharp",
         level:"Intermediate",
+        type:"pl",
+    },
+    {
+        imageUrl:php,
+        name:"PHP",
+        level:"Beginner",
         type:"pl",
     },
     {

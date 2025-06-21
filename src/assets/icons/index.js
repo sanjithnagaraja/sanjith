@@ -36,6 +36,7 @@ import electron from './electron.svg';
 import threejs from './threejs.svg';
 import mail from './mail.svg';
 import mysql from './mysql.svg';
+import php from './php.svg';
 
 
 export {
@@ -50,6 +51,7 @@ export {
     python,
     css,
     express,
+    php,
     git,
     mysql,
     github,
