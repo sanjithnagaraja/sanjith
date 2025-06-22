@@ -7,12 +7,12 @@ import bookD from '../assets/about/bookD.png';
 import { BookOpen } from 'react-feather';
 import { electron,react,nodejs,express,mongodb,threejs, tailwindcss, github } from "../assets/icons";
 import Portfolio1 from '../assets/projects/portfolio.png';
-import Portfolio3D from '../assets/projects/3d.png'
 import posSystem from '../assets/projects/posgif.gif'
 import mernEC from '../assets/projects/mernECgif.gif'
 import gobigif from '../assets/projects/gobigif.gif'
-import PersonalPortfolio from '../assets/projects/127-.gif'
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import PersonalPortfolio from '../assets/projects/127gif.gif'
+import Portfolio3D from '../assets/projects/3dgif.gif'
+import { FaGithub } from "react-icons/fa";
 
 
 
