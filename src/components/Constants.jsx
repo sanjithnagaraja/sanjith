@@ -24,21 +24,11 @@ import {
     contact,
     mysql,
     php,
+    typescript,
 } from '../assets/icons';
 
 export const skills = [
-    {
-        imageUrl:html,
-        name:"HTML",
-        level:"Experienced",
-        type:"Frontend",
-    },
-    {
-        imageUrl:css,
-        name:"CSS",
-        level:"Experienced",
-        type:"Frontend",
-    },
+   
     {
         imageUrl:nodejs,
         name:"NodeJS",
@@ -63,12 +53,7 @@ export const skills = [
         level:"Intermediate",
         type:"Database",
     },
-    {
-        imageUrl:javascript,
-        name:"JavaScript",
-        level:"Proficient",
-        type:"Frontend",
-    },
+    
     {
         imageUrl:github,
         name:"Git Hub",
@@ -85,6 +70,30 @@ export const skills = [
     {
         imageUrl:tailwindcss,
         name:"TailwindCSS",
+        level:"Experienced",
+        type:"Frontend",
+    }, 
+    {
+        imageUrl:javascript,
+        name:"JavaScript",
+        level:"Proficient",
+        type:"Frontend",
+    },
+    {
+        imageUrl:typescript,
+        name:"TypeScript",
+        level:"Beginner",
+        type:"Frontend",
+    },
+    {
+        imageUrl:html,
+        name:"HTML",
+        level:"Experienced",
+        type:"Frontend",
+    },
+    {
+        imageUrl:css,
+        name:"CSS",
         level:"Experienced",
         type:"Frontend",
     },
