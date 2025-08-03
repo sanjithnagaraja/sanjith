@@ -37,9 +37,13 @@ import threejs from './threejs.svg';
 import mail from './mail.svg';
 import mysql from './mysql.svg';
 import php from './php.svg';
+import angular from './angular.svg';
+import aws from './aws.svg';
 
 
 export {
+    angular,
+    aws,
     mail,
     threejs,
     gmail,

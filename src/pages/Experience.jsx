@@ -40,7 +40,7 @@ function Experience() {
         </div>
 
         <div className="w-full md:w-[80%] lg:w-[480px] h-[350px] rounded-3xl border-2 border-solid border-textBase/25 p-5 overflow-auto">
-            <p className="text-2xl font-light text-center text-textBase/85 dark:text-textBase/65">Backend Development</p>
+            <p className="text-2xl font-light text-center text-textBase/85 dark:text-textBase/65">Backend Development and Cloud</p>
             <div className="grid grid-cols-2 gap-4 mt-5 px-4">
               {skills
                 .filter((skill) => skill.type.toLowerCase() === "backend")

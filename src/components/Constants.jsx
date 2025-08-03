@@ -25,6 +25,8 @@ import {
     mysql,
     php,
     typescript,
+    angular,
+    aws,
 } from '../assets/icons';
 
 export const skills = [
@@ -41,6 +43,12 @@ export const skills = [
         level:"Beginner",
         type:"Backend",
     },
+    {
+        imageUrl:aws,
+        name:"AWS",
+        level:"Beginner",
+        type:"Backend",
+    }, 
     {
         imageUrl:git,
         name:"GIT",
@@ -68,11 +76,11 @@ export const skills = [
         type:"Frontend",
     },
     {
-        imageUrl:tailwindcss,
-        name:"TailwindCSS",
-        level:"Experienced",
+        imageUrl:angular,
+        name:"Angular",
+        level:"Beginner",
         type:"Frontend",
-    }, 
+    },
     {
         imageUrl:javascript,
         name:"JavaScript",
@@ -85,18 +93,25 @@ export const skills = [
         level:"Beginner",
         type:"Frontend",
     },
-    {
-        imageUrl:html,
-        name:"HTML",
-        level:"Experienced",
-        type:"Frontend",
-    },
+    // {
+    //     imageUrl:html,
+    //     name:"HTML",
+    //     level:"Experienced",
+    //     type:"Frontend",
+    // },
     {
         imageUrl:css,
         name:"CSS",
         level:"Experienced",
         type:"Frontend",
     },
+    
+    {
+        imageUrl:tailwindcss,
+        name:"TailwindCSS",
+        level:"Experienced",
+        type:"Frontend",
+    }, 
     {
         imageUrl:java,
         name:"Java",
