@@ -25,7 +25,7 @@ function Home() {
             </div>
             <div className="flex flex-row gap-3 font-medium justify-center p-2">
             <a
-              href="/Sanjith - Resume.pdf"
+              href="/Sanjith_Resume.pdf"
               download
               className="rounded-3xl border-solid border-2 border-textBase text-sm font-normal text-textBase/85 px-4 py-3 hover:bg-textBase/85 hover:text-primary/85 transition-all duration-500"
             >
