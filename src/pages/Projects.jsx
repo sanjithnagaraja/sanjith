@@ -47,13 +47,13 @@ const projects = [
   },
   {
   title: ["MERN Stack - TypeScript", "Ecommerce Site"],
-  description: "🛒 A scalable ecommerce site with MERN and TypeScript. Features low-code exploration, Bolt AI integration, prompt engineering, responsive design, Google OAuth2.0 login, and secure checkout flow with cash on delivery support.",
+description: "🛒 A scalable ecommerce site with MERN and TypeScript. Deployed both frontend and backend using Vercel, with database hosted on MongoDB Atlas, supporting Google OAuth2.0 login and secure checkout flow with cash on delivery.",
   image: ecommerceBoat,
   tech: [react, nodejs, express, mongodb, typescript, vercel ],
   links: {
     website: "https://all-in-one-rosy.vercel.app/",
     github: "https://github.com/player127-monster/ecommerce",
-    note: "Exploring Bolt AI, prompt engineering, and low-code workflows — includes Google OAuth2.0 and cash on delivery support,Both deploy on Vercel.",
+    note: "Exploring Bolt AI, prompt engineering, and low-code workflows — includes Google OAuth2.0.",
   },
   link:false
   },
