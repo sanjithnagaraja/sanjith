@@ -5,10 +5,11 @@ import badgeD from '../assets/about/badgeD.png';
 import book from '../assets/about/book.png';
 import bookD from '../assets/about/bookD.png';
 import { BookOpen } from 'react-feather';
-import { electron,react,nodejs,express,mongodb,threejs, tailwindcss, github } from "../assets/icons";
+import { electron,react,nodejs,express,mongodb,threejs, tailwindcss, github, typescript, vercel, javascript } from "../assets/icons";
 import Portfolio1 from '../assets/projects/portfolio.png';
 import posSystem from '../assets/projects/posgif.gif'
 import mernEC from '../assets/projects/mernECgif.gif'
+import ecommerceBoat from '../assets/projects/allinone.png'
 import gobigif from '../assets/projects/gobigif.gif'
 import PersonalPortfolio from '../assets/projects/127gif.gif'
 import Portfolio3D from '../assets/projects/3dgif.gif'
@@ -24,7 +25,7 @@ const projects = [
     title: ["MERN Stack", "Ecommerce Site"],
     description: "🛍️ A full-stack web app built with the MERN stack. Features include JWT auth, Stripe payments, cart management, admin panel, and user reviews — designed as a capstone project focused on clean, scalable full-stack architecture.",
     image: mernEC,
-    tech: [react, nodejs, express, mongodb],
+    tech: [react, nodejs, express, mongodb, javascript],
     links: {
       website: false,
       github:"https://github.com/player127-monster/ecommerce",
@@ -36,7 +37,7 @@ const projects = [
     title: ["React, LokiJS & ElectronJS", "Offline Billing System"],
     description: "🧾 A lightweight POS desktop app using React, Electron, and LokiJS. Enables real-time item tracking, customer records, and invoice PDF generation — fully offline, fast, and ideal for small businesses needing simple billing.",
     image: posSystem,
-    tech: [react, electron, "LokiJS"],
+    tech: [react, electron, javascript, "LokiJS"],
     links: {
       website: false,
       github:false,
@@ -45,10 +46,22 @@ const projects = [
     link:false
   },
   {
+  title: ["MERN Stack - TypeScript", "Ecommerce Site"],
+  description: "🛒 A scalable ecommerce site with MERN and TypeScript. Features low-code exploration, Bolt AI integration, prompt engineering, responsive design, Google OAuth2.0 login, and secure checkout flow with cash on delivery support.",
+  image: ecommerceBoat,
+  tech: [react, nodejs, express, mongodb, typescript, vercel ],
+  links: {
+    website: "https://all-in-one-rosy.vercel.app/",
+    github: "https://github.com/player127-monster/ecommerce",
+    note: "Exploring Bolt AI, prompt engineering, and low-code workflows — includes Google OAuth2.0 and cash on delivery support,Both deploy on Vercel.",
+  },
+  link:false
+  },
+  {
     title: ["React & Three.js", "3D  Portfolio"],
     description: "🌐 A dynamic portfolio built using React and Three.js. Features 3D models, animations, and camera movement to present web dev skills in an engaging way. Optimized for desktop, mobile, and responsive screen sizes.",
     image: Portfolio3D,
-    tech: [react, threejs],
+    tech: [react, threejs, javascript],
     links: {
       website: false,
       github:"https://github.com/player127-monster/portfolio",
@@ -60,7 +73,7 @@ const projects = [
     title: ["React & Tailwind CSS", "Static Studio Website"],
     description: "🎨 A static site created with React and Tailwind CSS. Combines modern layout, smooth scroll, router navigation, and Spline 3D visuals for creative presentation — ideal for personal branding or studio portfolios.",
     image: gobigif,
-    tech: [react, tailwindcss],
+    tech: [react, tailwindcss, javascript],
     links: {
       website: "https://gobistudio.pages.dev/",
       github:"https://github.com/player127-monster/gobi_studio",
@@ -72,7 +85,7 @@ const projects = [
     title: ["React & Tailwind CSS", "Personal Portfolio"],
     description: "🧑‍💻 A clean developer portfolio with React and Tailwind CSS. Includes light/dark mode, scroll-based sections, responsive layout, and EmailJS integration — styled using a minimal palette with focus on UI clarity.",
     image: PersonalPortfolio,
-    tech: [react, tailwindcss],
+    tech: [react, tailwindcss, javascript],
     links: {
       website: "https://sanjith.vercel.app/",
       github:false,
@@ -80,6 +93,7 @@ const projects = [
     },
     link:false
   },
+
 ];
 
 

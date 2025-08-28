@@ -39,9 +39,13 @@ import mysql from './mysql.svg';
 import php from './php.svg';
 import angular from './angular.svg';
 import aws from './aws.svg';
+import vercel from './vercel.svg';
+import gsap from './gsap.svg';
 
 
 export {
+    gsap,
+    vercel,
     angular,
     aws,
     mail,

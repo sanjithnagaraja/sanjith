@@ -27,6 +27,7 @@ import {
     typescript,
     angular,
     aws,
+    gsap,
 } from '../assets/icons';
 
 export const skills = [
@@ -99,19 +100,19 @@ export const skills = [
     //     level:"Experienced",
     //     type:"Frontend",
     // },
-    {
-        imageUrl:css,
-        name:"CSS",
-        level:"Experienced",
-        type:"Frontend",
-    },
+    
     
     {
         imageUrl:tailwindcss,
         name:"TailwindCSS",
         level:"Experienced",
         type:"Frontend",
-    }, 
+    }, {
+        imageUrl:gsap,
+        name:"GSAP",
+        level:"Beginner",
+        type:"Frontend",
+    },
     {
         imageUrl:java,
         name:"Java",

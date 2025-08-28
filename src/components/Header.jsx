@@ -77,8 +77,9 @@ function Header() {
 <div className="relative z-50">
   
 
-      {/* Mobile Header */}
-      <div ref={menuWrapperRef} className="fixed top-0 left-0 py-2 z-20 md:hidden bg-slate-50/85 dark:bg-neutral-800 flex justify-between items-center w-full px-5 transition-all duration-700 shadow">
+      {/* Mobile Header ref={menuWrapperRef}*/}
+      
+      <div  className="fixed top-0 left-0 py-2 z-20 md:hidden bg-slate-50/85 dark:bg-neutral-800 flex justify-between items-center w-full px-5 transition-all duration-700 shadow">
         <p className="text-3xl font-poppins font-light text-textBase/75">Sanjith</p>
         <div className="flex justify-center items-center">
           <button onClick={() => setToggleMenu(!toggleMenu)} className="text-white z-50 transition-transform duration-500 ease-in-out">
@@ -94,8 +95,8 @@ function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      <div ref={menuRef}
+      {/* Mobile Menu Overlay ref={menuRef} */}
+      <div 
         className={` fixed top-[50px] left-3 right-3 md:hidden bg-slate-50/85 dark:bg-neutral-800 index-50 rounded-xl px-5 flex flex-col gap-2 text-xl transition-opacity duration-700 ease-in-out
         ${toggleMenu ? "opacity-100 pointer-events-auto py-2" : "opacity-0 pointer-events-none py-0"}`}
       >
