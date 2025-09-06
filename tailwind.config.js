@@ -30,7 +30,7 @@ export default {
       },
       animation: {
         fadeIn: 'fadeIn 0.5s ease-in forwards',
-        fadeOut: 'fadeOut 0.5s ease-out forwards',
+        fadeOut: 'fadeOut 0.5s ease-out forwards', 'spin-slow': 'spin 10s linear infinite',
       },
       screens: {
                 'xs': '300px',  // Custom breakpoint for 300px+
