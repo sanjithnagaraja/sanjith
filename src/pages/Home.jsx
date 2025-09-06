@@ -24,20 +24,19 @@ function Home() {
                 <p className="text-6xl md:text-7xl font-bold text-textBase/85">Sanjith</p>
                 {/* Typewriter effect here */}
             <p className="pt-1 text-3xl md:text-4xl font-normal text-gray-600/65 text-left md:pl-14 pl-24">
-  <ReactTyped
-    strings={[
-      "Full Stack Developer",
-      "Frontend Developer",
-    ]}
-    typeSpeed={90}
-    backSpeed={90}
-    backDelay={1500}
-    loop
-    showCursor={true} // keeps the blinking cursor at the end
-    cursorChar="|"   // optional: customize cursor
-  />
-</p>
-
+                <ReactTyped
+                  strings={[
+                    "Full Stack Developer",
+                    "Frontend Developer",
+                  ]}
+                  typeSpeed={90}
+                  backSpeed={90}
+                  backDelay={1500}
+                  loop
+                  showCursor={true} // keeps the blinking cursor at the end
+                  cursorChar="|"   // optional: customize cursor
+                />
+              </p>
             </div>
             <div className="flex flex-row gap-3 font-medium justify-center p-2">
             <a
