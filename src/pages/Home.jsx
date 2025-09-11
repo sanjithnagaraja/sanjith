@@ -23,8 +23,9 @@ function Home() {
                 <p className=" text-xl md:text-2xl font-normal text-gray-600/85">Hello, I'm</p>
                 <p className="text-6xl md:text-7xl font-bold text-textBase/85">Sanjith</p>
                 {/* Typewriter effect here */}
-            <p className="pt-1 text-3xl md:text-4xl font-normal text-gray-600/65 text-left md:pl-14 pl-24">
-                <ReactTyped
+            <p className="pt-1 text-3xl md:text-4xl font-normal text-gray-600/65 text-left md:pl-16 pl-24">
+                <span className="">
+                  <ReactTyped
                   strings={[
                     "Full Stack Developer",
                     "Frontend Developer",
@@ -35,7 +36,7 @@ function Home() {
                   loop
                   showCursor={true} // keeps the blinking cursor at the end
                   cursorChar="|"   // optional: customize cursor
-                />
+                /></span>
               </p>
             </div>
             <div className="flex flex-row gap-3 font-medium justify-center p-2">

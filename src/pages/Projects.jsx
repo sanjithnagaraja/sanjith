@@ -111,8 +111,8 @@ description: "🛒 A scalable ecommerce site with MERN and TypeScript. Deployed 
 
         {projects.map((project, index) => (
           <div key={index} className="md:w-[80%] lg:w-[400px] h-auto rounded-2xl border-2 border-solid border-textBase/25 p-7 flex flex-col space-y-5">
-            <h3 className="text-2xl font-light text-center  text-gray-600/85 dark:text-textBase/45">
-              {project.title[0]}<br /><span className="text-3xl font-light text-center text-textBase/85 dark:text-textBase/75">{project.title[1]}</span>
+            <h3 className="md:text-2xl text-xl  font-light text-center  text-gray-600/85 dark:text-textBase/45">
+              {project.title[0]}<br /><span className="md:text-3xl text-2xl font-light text-center text-textBase/85 dark:text-textBase/75">{project.title[1]}</span>
             </h3><div className="overflow-hidden rounded-xl mt-4 w-full h-52">
              <img
                 src={project.image}
@@ -122,7 +122,7 @@ description: "🛒 A scalable ecommerce site with MERN and TypeScript. Deployed 
               />
             </div>
 
-            <p className="text-textBase/30 mt-2 text-justify">{project.description}</p>
+            <p className="text-textBase/30 dark:text-textBase/50 mt-2 text-justify">{project.description}</p>
             <div className="flex flex-wrap gap-2 mt-3">
               {project.tech.map((t, i) => ( t!=="LokiJS"?
                 <img src={t} key={i} className="bg-gray-200 text-xs px-2 py-1 rounded w-8 h-8 object-contain">
@@ -137,14 +137,14 @@ description: "🛒 A scalable ecommerce site with MERN and TypeScript. Deployed 
             {(
                
               <div className="flex md:flex-row flex-col justify-between">
-                {project.links.website && <a href={project.links.website} target="_blank" rel="noopener noreferrer" className="py-2 px-2 w-[60%] md:w-auto md:pr-3 rounded-full bg-primary/0 text-textBase hover:bg-textBase/85 hover:text-primary/85 transition-colors mt-2">
-                  🔗 View project
+                {project.links.website && <a href={project.links.website} target="_blank" rel="noopener noreferrer" className="py-2 px-2 w-[60%] md:w-auto md:pr-3 sm-xs:text-lg text-sm  rounded-full bg-primary/0 text-textBase hover:bg-textBase/85 hover:text-primary/85 transition-colors mt-2">
+                  🔗 <span className="sm-xs:pl-0 pl-2">View project</span>
                 </a>}
 
                 {project.links.github && <a href={project.links.github} target="_blank" rel="noopener noreferrer"
                   className="py-2 px-2 rounded-full w-[60%] md:w-auto bg-primary/0 text-textBase hover:bg-textBase/85 hover:text-primary/85 transition-colors mt-2">
                   <div className="flex gap-2 ">
-                    <FaGithub className="w-6 h-6" /><span> Visit project</span>
+                    <FaGithub className="w-6 h-6" /><span className="sm-xs:text-lg text-sm"> Visit project</span>
                   </div>
                 </a>}
               </div>

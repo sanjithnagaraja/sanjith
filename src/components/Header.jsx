@@ -89,7 +89,7 @@ function Header() {
             <Bars3Icon className="h-6 w-6 stroke-textBase/85 transition-transform duration-700" />
           )}
         </button>
-        {toggleMenu && <div className="absolute right-0 py-1">
+        {toggleMenu && <div className="absolute -right-4 py-1">
         <ThemeToggle />
       </div>}
         </div>
@@ -97,7 +97,7 @@ function Header() {
 
       {/* Mobile Menu Overlay ref={menuRef} */}
       <div 
-        className={` fixed top-[50px] left-3 right-3 md:hidden bg-slate-50/85 dark:bg-neutral-800 index-50 rounded-xl px-5 flex flex-col gap-2 text-xl transition-opacity duration-700 ease-in-out
+        className={` fixed top-[50px] left-3 right-3 md:hidden bg-slate-50/85 dark:bg-neutral-800 index-50 rounded-xl px-1 flex flex-col gap-2 text-xl transition-opacity duration-700 ease-in-out
         ${toggleMenu ? "opacity-100 pointer-events-auto py-2" : "opacity-0 pointer-events-none py-0"}`}
       >
         {navLinks.map((navLink, index) => (

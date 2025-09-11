@@ -41,9 +41,11 @@ import angular from './angular.svg';
 import aws from './aws.svg';
 import vercel from './vercel.svg';
 import gsap from './gsap.svg';
+import postman from './postman.svg';
 
 
 export {
+    postman,
     gsap,
     vercel,
     angular,

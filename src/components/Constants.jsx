@@ -28,6 +28,7 @@ import {
     angular,
     aws,
     gsap,
+    postman,
 } from '../assets/icons';
 
 export const skills = [
@@ -42,6 +43,12 @@ export const skills = [
         imageUrl:express,
         name:"Express",
         level:"Beginner",
+        type:"Backend",
+    },
+    {
+        imageUrl:postman,
+        name:"Postman",
+        level:"Intermediate",
         type:"Backend",
     },
     {
