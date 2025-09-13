@@ -10,6 +10,7 @@ import Portfolio1 from '../assets/projects/portfolio.png';
 import posSystem from '../assets/projects/posgif.gif'
 import mernEC from '../assets/projects/mernECgif.gif'
 import ecommerceBoat from '../assets/projects/allinone.png'
+import kidmo from '../assets/projects/kidmo.png'
 import gobigif from '../assets/projects/gobigif.gif'
 import PersonalPortfolio from '../assets/projects/127gif.gif'
 import Portfolio3D from '../assets/projects/3dgif.gif'
@@ -48,10 +49,10 @@ const projects = [
   {
   title: ["MERN Stack - TypeScript", "Ecommerce Site"],
 description: "🛒 A scalable ecommerce site with MERN and TypeScript. Deployed both frontend and backend using Vercel, with database hosted on MongoDB Atlas, supporting Google OAuth2.0 login and secure checkout flow with cash on delivery.",
-  image: ecommerceBoat,
+  image: kidmo,
   tech: [react, nodejs, express, mongodb, typescript, vercel ],
   links: {
-    website: "https://all-in-one-rosy.vercel.app/",
+    website: "https://kidmo.vercel.app/",
     github: "https://github.com/player127-monster/ecommerce",
     note: "Exploring Bolt AI, prompt engineering, and low-code workflows — includes Google OAuth2.0.",
   },
