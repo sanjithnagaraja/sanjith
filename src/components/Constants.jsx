@@ -36,13 +36,13 @@ export const skills = [
     {
         imageUrl:nodejs,
         name:"NodeJS",
-        level:"Beginner",
+        level:"Intermediate",
         type:"Backend",
     },
     {
         imageUrl:express,
         name:"Express",
-        level:"Beginner",
+        level:"Intermediate",
         type:"Backend",
     },
     {

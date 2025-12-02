@@ -59,7 +59,7 @@ function Home() {
             </div>
             <div className="flex justify-center gap-5 pt-1">
                  {/* LinkedIn */}
-                <a href="https://www.linkedin.com/in/nagaraja-sanjith" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/sanjithnagaraja" target="_blank" rel="noopener noreferrer"
                   className="p-2 rounded-full bg-primary/0 text-textBase hover:bg-textBase/85 hover:text-primary/85 transition-colors">
                   <FaLinkedin className="w-6 h-6 object-contain" />
                 </a>

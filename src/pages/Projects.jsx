@@ -5,7 +5,7 @@ import badgeD from '../assets/about/badgeD.png';
 import book from '../assets/about/book.png';
 import bookD from '../assets/about/bookD.png';
 import { BookOpen } from 'react-feather';
-import { electron,react,nodejs,express,mongodb,threejs, tailwindcss, github, typescript, vercel, javascript } from "../assets/icons";
+import { electron,react,nodejs,express,mongodb,threejs, tailwindcss, github, typescript, vercel, javascript, aws } from "../assets/icons";
 import Portfolio1 from '../assets/projects/portfolio.png';
 import posSystem from '../assets/projects/posgif.gif'
 import mernEC from '../assets/projects/mernECgif.gif'
@@ -14,6 +14,8 @@ import kidmo from '../assets/projects/kidmo.png'
 import gobigif from '../assets/projects/gobigif.gif'
 import PersonalPortfolio from '../assets/projects/127gif.gif'
 import Portfolio3D from '../assets/projects/3dgif.gif'
+import mba from '../assets/projects/mba.png'
+import epfetf from '../assets/projects/epfetf.png'
 import { FaGithub } from "react-icons/fa";
 
 
@@ -23,9 +25,33 @@ function Projects() {
 
 const projects = [
   {
+    title: ["MERN Stack & AWS S3", "Academy Website"],
+    description: "A academy platform with TypeScript and Tailwind CSS, featuring Google OAuth 2.0 login, AWS S3 file handling, and EmailJS notifications. Includes a LMS with student, teacher, and admin roles for course, assignment, and user management.",
+    image: mba,
+    tech: [aws, react, nodejs, express, mongodb, javascript],
+    links: {
+      website: "https://modernbusinessacademy.edu.lk",
+      github:false,
+      note: "A foundational full-stack learning project accelerated through YouTube tutorials."
+    },
+    link:true
+  },
+  {
     title: ["MERN Stack", "Ecommerce Site"],
     description: "🛍️ A full-stack web app built with the MERN stack. Features include JWT auth, Stripe payments, cart management, admin panel, and user reviews — designed as a capstone project focused on clean, scalable full-stack architecture.",
     image: mernEC,
+    tech: [react, nodejs, express, mongodb, javascript],
+    links: {
+      website: false,
+      github:"https://github.com/player127-monster/ecommerce",
+      note: "A foundational full-stack learning project accelerated through YouTube tutorials."
+    },
+    link:true
+  },
+  {
+    title: ["MERN Stack", "EPF/ETF System"],
+    description: " A EPF/ETF management system, featuring employee salary history tracking, automated EPF/ETF rate calculations, and accurate report generation. Supports exporting official EPF/ETF documents as downloadable PDFs.",
+    image: epfetf,
     tech: [react, nodejs, express, mongodb, javascript],
     links: {
       website: false,
@@ -59,18 +85,6 @@ description: "🛒 A scalable ecommerce site with MERN and TypeScript. Deployed 
   link:false
   },
   {
-    title: ["React & Three.js", "3D  Portfolio"],
-    description: "🌐 A dynamic portfolio built using React and Three.js. Features 3D models, animations, and camera movement to present web dev skills in an engaging way. Optimized for desktop, mobile, and responsive screen sizes.",
-    image: Portfolio3D,
-    tech: [react, threejs, javascript],
-    links: {
-      website: false,
-      github:"https://github.com/player127-monster/portfolio",
-      note: "An experimental 3D web experience guided by ChatGPT and YouTube resources."
-    },
-    link:true
-  },
-  {
     title: ["React & Tailwind CSS", "Static Studio Website"],
     description: "🎨 A static site created with React and Tailwind CSS. Combines modern layout, smooth scroll, router navigation, and Spline 3D visuals for creative presentation — ideal for personal branding or studio portfolios.",
     image: gobigif,
@@ -79,6 +93,18 @@ description: "🛒 A scalable ecommerce site with MERN and TypeScript. Deployed 
       website: "https://gobistudio.pages.dev/",
       github:"https://github.com/player127-monster/gobi_studio",
       note: "An independently developed project exploring advanced front-end design patterns, routing, and 3D integration using Spline."
+    },
+    link:true
+  },
+  {
+    title: ["React & Three.js", "3D  Portfolio"],
+    description: "🌐 A dynamic portfolio built using React and Three.js. Features 3D models, animations, and camera movement to present web dev skills in an engaging way. Optimized for desktop, mobile, and responsive screen sizes.",
+    image: Portfolio3D,
+    tech: [react, threejs, javascript],
+    links: {
+      website: false,
+      github:"https://github.com/player127-monster/portfolio",
+      note: "An experimental 3D web experience guided by ChatGPT and YouTube resources."
     },
     link:true
   },
@@ -113,7 +139,7 @@ description: "🛒 A scalable ecommerce site with MERN and TypeScript. Deployed 
         {projects.map((project, index) => (
           <div key={index} className="md:w-[80%] lg:w-[400px] h-auto rounded-2xl border-2 border-solid border-textBase/25 p-7 flex flex-col space-y-5">
             <h3 className="md:text-2xl text-xl  font-light text-center  text-gray-600/85 dark:text-textBase/45">
-              {project.title[0]}<br /><span className="md:text-3xl text-2xl font-light text-center text-textBase/85 dark:text-textBase/75">{project.title[1]}</span>
+              {project.title[0]}<br /><span className="md:text-3xl text-2xl font-light text-center text-textBase/85 dark:text-textBase/85">{project.title[1]}</span>
             </h3><div className="overflow-hidden rounded-xl mt-4 w-full h-52">
              <img
                 src={project.image}
@@ -123,7 +149,7 @@ description: "🛒 A scalable ecommerce site with MERN and TypeScript. Deployed 
               />
             </div>
 
-            <p className="text-textBase/30 dark:text-textBase/50 mt-2 text-justify">{project.description}</p>
+            <p className="text-textBase/30 dark:text-textBase/60 mt-2 text-justify">{project.description}</p>
             <div className="flex flex-wrap gap-2 mt-3">
               {project.tech.map((t, i) => ( t!=="LokiJS"?
                 <img src={t} key={i} className="bg-gray-200 text-xs px-2 py-1 rounded w-8 h-8 object-contain">
