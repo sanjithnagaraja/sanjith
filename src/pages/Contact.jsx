@@ -1,10 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {mail,whatsapp} from '../assets/icons/index';
-import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
 
 function CopyText({ text }) {
-
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -32,41 +30,39 @@ function CopyText({ text }) {
 
 
 function Contact() {
-
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    const { user_name, user_email, message } = form.current;
-
-      if (!user_name.value.trim() || !user_email.value.trim() || !message.value.trim()) {
-        toast.error('Please fill in all the fields.');
-        return;
-      }
-
-
-    emailjs
-      .sendForm('service_rih6am6', 'template_eqlq0sp', form.current, {
-        publicKey: 'QzsptgdZFjee98ogE',
-      })
-      .then(
-        (result) => {
-          console.log('SUCCESS!');
-          toast.success('Email sent successfully!');
-          console.log(result.text);
-          form.current.reset();
-          
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-          toast.error('Failed to send email. Please try again.');
-        },
-      );
-  };
-
   const [toggle,setToggle] = useState(false);
 
+  const mailSubmitHandler = (e) => {
+
+
+//     const sendEmail = async (formData) => {
+//   toast.loading('Sending email...');
+
+//   try {
+//     const result = await emailjs.send(
+//       'your_service_id',
+//       'your_template_id',
+//       formData,
+//       'your_user_id'
+//     );
+
+//     toast.dismiss(); // Remove loading
+//     toast.success('✅ Email sent successfully!');
+//     console.log(result.text);
+//   } catch (error) {
+//     toast.dismiss();
+//     toast.error('❌ Failed to send email. Please try again.');
+//     console.error(error);
+//   }
+// };
+
+
+  toast.loading('Sending email...');
+    console.log(e);
+    toast.success('✅ Email sent successfully!');toast.dismiss();
+    toast.error('❌ Failed to send email. Please try again.');
+    
+  }
 
   return (
     <section  className="flex flex-col gap-8 w-full h-[700px] xl:h-screen font-poppins justify-center bg-primary/5 dark:bg-primary/85 pt-10 pb-0">
@@ -75,12 +71,13 @@ function Contact() {
         <p className="text-5xl md:text-6xl font-extrabold text-textBase/85 mt-1">Contact Me</p>
       </div>
       <div className="flex w-full justify-center pt-10">
+      
 
-          <form ref={form} onSubmit={sendEmail} className="flex w-[80%] md:w-[60%] xl:w-[30%] flex-col gap-5 items-center">
-            <input type="text" name="user_name" placeholder="Enter your name" className="py-2 px-5 w-full  border-b text-sm  border-0 border-textBase/25 rounded-xl dark:bg-neutral-800 md:dark:bg-primary/5 bg-primary/5" />
-            <input type="text" name="user_email" placeholder="Enter your email address" className="py-2 px-5 w-full  border-b text-sm  border-0 border-textBase/25 rounded-xl dark:bg-neutral-800 md:dark:bg-primary/5 bg-primary/5" />
+          <form onSubmit={mailSubmitHandler} className="flex w-[80%] xl:w-[30%] flex-col gap-5 items-center">
+            <input type="text" name="name" placeholder="Enter your name" className="py-2 px-5 w-full  border-b text-sm  border-0 border-textBase/25 rounded-xl dark:bg-neutral-800 md:dark:bg-primary/5 bg-primary/5" />
+            <input type="text" name="email" placeholder="Enter your email address" className="py-2 px-5 w-full  border-b text-sm  border-0 border-textBase/25 rounded-xl dark:bg-neutral-800 md:dark:bg-primary/5 bg-primary/5" />
             <textarea type="textarea" rows={6} name="message" placeholder="Enter your message ..."  className="py-2 px-5 w-full  border-b text-sm  border-0 border-textBase/25 rounded-xl dark:bg-neutral-800 md:dark:bg-primary/5 bg-primary/5" />
-            <button type="submit" value="Send" className="py-2 px-5 w-full rounded-2xl border-2 border-textBase/25 bg-primary/0 text-textBase/85 text-lg font-semibold hover:bg-textBase/75 hover:text-primary/85 transition-colors">Send </button>
+            <button type="submit" className="py-2 px-5 w-full rounded-2xl border-2 border-textBase/25 bg-primary/0 text-textBase/85 text-lg font-semibold hover:bg-textBase/75 hover:text-primary/85 transition-colors">Send </button>
           </form>
         
       </div>
@@ -107,7 +104,6 @@ function Contact() {
                 </div>
           </div>
         </div>
-        <Toaster position="bottom-center" reverseOrder={false} />
     
     </section>
   );

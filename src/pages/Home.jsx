@@ -6,14 +6,12 @@ import myPic from '../assets/my.png';
 // import { github, linkedin } from "../assets/icons";
 // import linkedin1 from '../assets/icons/linkedin1.svg';
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { Link } from 'react-scroll';
-import { ReactTyped } from "react-typed";
 
 
 function Home() {
 
   return (
-    <section id="home" className="flex flex-col-reverse lg:flex-row gap-5 lg:gap-2 w-full h-[700px] md:h-[750px] xl:h-screen bg-primary/5  dark:bg-primary/85 justify-end items-center text-textBase">
+    <section id="home" className="flex flex-col-reverse lg:flex-row gap-5 lg:gap-2 w-full h-[800px] xl:h-screen bg-primary/5  dark:bg-primary/85 justify-end items-center text-textBase">
 
 
         
@@ -22,44 +20,15 @@ function Home() {
             <div className="flex flex-col gap-2 text-center w-full p-2">
                 <p className=" text-xl md:text-2xl font-normal text-gray-600/85">Hello, I'm</p>
                 <p className="text-6xl md:text-7xl font-bold text-textBase/85">Sanjith</p>
-                {/* Typewriter effect here */}
-            <p className="pt-1 text-3xl md:text-4xl font-normal text-gray-600/65 text-left md:pl-16 pl-24">
-                <span className="">
-                  <ReactTyped
-                  strings={[
-                    "Full Stack Developer",
-                    "Frontend Developer",
-                  ]}
-                  typeSpeed={90}
-                  backSpeed={90}
-                  backDelay={1500}
-                  loop
-                  showCursor={true} // keeps the blinking cursor at the end
-                  cursorChar="|"   // optional: customize cursor
-                /></span>
-              </p>
+                <p className="pt-1  text-3xl md:text-4xl font-normal text-gray-600/65">Frontend Developer</p>
             </div>
             <div className="flex flex-row gap-3 font-medium justify-center p-2">
-            <a
-              href="/Sanjith_Resume.pdf"
-              download
-              className="rounded-3xl border-solid border-2 border-textBase text-sm font-normal text-textBase/85 px-4 py-3 hover:bg-textBase/85 hover:text-primary/85 transition-all duration-500"
-            >
-                Download CV
-              </a>                
-              <Link
-                  to="contact"
-                  smooth={true}
-                  duration={600}
-                  offset={-70}
-                  className="rounded-3xl bg-textBase/85 border-solid border-2 border-textBase/85 text-sm font-normal text-primary/85 px-4 py-3 hover:bg-primary/5 hover:text-textBase/85 transition-all duration-500"
-                >
-                  Contact Info
-                </Link>
+                <button className="rounded-3xl border-solid border-2 border-textBase text-sm font-normal text-textBase/85 px-4 py-3 hover:bg-textBase/85 hover:text-primary/85 transition-all duration-500">Download CV</button>
+                <button className="rounded-3xl bg-textBase/85 border-solid border-2 border-textBase/85 text-sm font-normal text-primary/85 px-4 py-2 hover:bg-primary/5 hover:text-textBase/85 transition-all duration-500">Contact Info</button>
             </div>
             <div className="flex justify-center gap-5 pt-1">
                  {/* LinkedIn */}
-                <a href="https://www.linkedin.com/in/sanjithnagaraja" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/nagaraja-sanjith" target="_blank" rel="noopener noreferrer"
                   className="p-2 rounded-full bg-primary/0 text-textBase hover:bg-textBase/85 hover:text-primary/85 transition-colors">
                   <FaLinkedin className="w-6 h-6 object-contain" />
                 </a>

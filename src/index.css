@@ -42,17 +42,9 @@
 /* to prevent html body margin effect on dark mode */
   @layer base {
   html, body {
-    @apply bg-[rgb(var(--color-bg-primary))] text-[rgb(var(--color-text-base))] m-0 p-0 overflow-x-hidden;
+    @apply bg-[rgb(var(--color-bg-primary))] text-[rgb(var(--color-text-base))] m-0 p-0;
+    overflow-y: auto;
   }
-}
-
-html, body {
-  overscroll-behavior: none;
-}
-
-
-body {
-  overscroll-behavior-y: none;
 }
 
 

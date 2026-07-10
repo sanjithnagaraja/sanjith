@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from 'react-scroll';
 import ThemeToggle from "../components/ThemeToggle";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
@@ -10,42 +10,12 @@ function Header() {
 
     const [toggleMenu,setToggleMenu]=useState(false);
 
-    const menuRef = useRef(null);
- const menuWrapperRef = useRef(null); // one ref to rule them all
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        toggleMenu &&
-        menuWrapperRef.current &&
-        !menuWrapperRef.current.contains(event.target)
-      ) {
-        setToggleMenu(false);
-      }
-    };
-
-    const handleScroll = () => {
-      if (toggleMenu) setToggleMenu(false);
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [toggleMenu]);
-
-
-
     const navLinks=[
         {href:"about", name:"About"},
         {href:"experience", name:"Experience"},
         {href:"projects", name:"Projects"},
         {href:"contact", name:"Contact"}
     ]
-    
 
   return (
     <section className="relative w-full flex flex-col md:flex-row justify-center md:justify-around bg-primary/5 dark:bg-primary/85 p-5 md:p-7 md:pb-0 z-50">
@@ -70,16 +40,12 @@ function Header() {
         ))}
       </div>
 
-      <div className="hidden md:flex absolute -right-6  lg:-right-3 lg:py-1">
+      <div className="hidden md:flex absolute -right-6 lg:right-0 lg:py-1">
         <ThemeToggle />
       </div>
 
-<div className="relative z-50">
-  
-
-      {/* Mobile Header ref={menuWrapperRef}*/}
-      
-      <div  className="fixed top-0 left-0 py-2 z-20 md:hidden bg-slate-50/85 dark:bg-neutral-800 flex justify-between items-center w-full px-5 transition-all duration-700 shadow">
+      {/* Mobile Header */}
+      <div className="md:hidden flex justify-between items-center w-full px-5 transition-all duration-700">
         <p className="text-3xl font-poppins font-light text-textBase/75">Sanjith</p>
         <div className="flex justify-center items-center">
           <button onClick={() => setToggleMenu(!toggleMenu)} className="text-white z-50 transition-transform duration-500 ease-in-out">
@@ -89,15 +55,15 @@ function Header() {
             <Bars3Icon className="h-6 w-6 stroke-textBase/85 transition-transform duration-700" />
           )}
         </button>
-        {toggleMenu && <div className="absolute -right-4 py-1">
+        {toggleMenu && <div className="absolute right-0 py-1">
         <ThemeToggle />
       </div>}
         </div>
       </div>
 
-      {/* Mobile Menu Overlay ref={menuRef} */}
-      <div 
-        className={` fixed top-[50px] left-3 right-3 md:hidden bg-slate-50/85 dark:bg-neutral-800 index-50 rounded-xl px-1 flex flex-col gap-2 text-xl transition-opacity duration-700 ease-in-out
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`absolute top-[70px] left-3 right-3 md:hidden bg-slate-50/85 dark:bg-neutral-800 index-50 rounded-xl px-5 flex flex-col gap-2 text-xl transition-opacity duration-700 ease-in-out
         ${toggleMenu ? "opacity-100 pointer-events-auto py-2" : "opacity-0 pointer-events-none py-0"}`}
       >
         {navLinks.map((navLink, index) => (
@@ -113,7 +79,6 @@ function Header() {
             {navLink.name}
           </Link>
         ))}
-      </div>
       </div>
     </section>
   )

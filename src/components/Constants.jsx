@@ -22,41 +22,34 @@ import {
     tailwindcss,
     linkedin,
     contact,
-    mysql,
-    php,
-    typescript,
-    angular,
-    aws,
-    gsap,
-    postman,
+    sql,
 } from '../assets/icons';
 
 export const skills = [
-   
+    {
+        imageUrl:html,
+        name:"HTML",
+        level:"Experienced",
+        type:"Frontend",
+    },
+    {
+        imageUrl:css,
+        name:"CSS",
+        level:"Experienced",
+        type:"Frontend",
+    },
     {
         imageUrl:nodejs,
         name:"NodeJS",
-        level:"Intermediate",
+        level:"Beginner",
         type:"Backend",
     },
     {
         imageUrl:express,
         name:"Express",
-        level:"Intermediate",
-        type:"Backend",
-    },
-    {
-        imageUrl:postman,
-        name:"Postman",
-        level:"Intermediate",
-        type:"Backend",
-    },
-    {
-        imageUrl:aws,
-        name:"AWS",
         level:"Beginner",
         type:"Backend",
-    }, 
+    },
     {
         imageUrl:git,
         name:"GIT",
@@ -69,7 +62,12 @@ export const skills = [
         level:"Intermediate",
         type:"Database",
     },
-    
+    {
+        imageUrl:javascript,
+        name:"JavaScript",
+        level:"Proficient",
+        type:"Frontend",
+    },
     {
         imageUrl:github,
         name:"Git Hub",
@@ -84,40 +82,9 @@ export const skills = [
         type:"Frontend",
     },
     {
-        imageUrl:angular,
-        name:"Angular",
-        level:"Beginner",
-        type:"Frontend",
-    },
-    {
-        imageUrl:javascript,
-        name:"JavaScript",
-        level:"Proficient",
-        type:"Frontend",
-    },
-    {
-        imageUrl:typescript,
-        name:"TypeScript",
-        level:"Beginner",
-        type:"Frontend",
-    },
-    // {
-    //     imageUrl:html,
-    //     name:"HTML",
-    //     level:"Experienced",
-    //     type:"Frontend",
-    // },
-    
-    
-    {
         imageUrl:tailwindcss,
         name:"TailwindCSS",
         level:"Experienced",
-        type:"Frontend",
-    }, {
-        imageUrl:gsap,
-        name:"GSAP",
-        level:"Beginner",
         type:"Frontend",
     },
     {
@@ -139,14 +106,8 @@ export const skills = [
         type:"pl",
     },
     {
-        imageUrl:php,
-        name:"PHP",
-        level:"Beginner",
-        type:"pl",
-    },
-    {
-        imageUrl:mysql,
-        name:"MySQL",
+        imageUrl:sql,
+        name:"SQL",
         level:"Intermediate",
         type:"Version Control",
     },

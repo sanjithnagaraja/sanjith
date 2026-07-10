@@ -13,8 +13,8 @@ function Experience() {
         <p className="text-5xl font-extrabold text-textBase/85 pt-1">Experience</p>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-10 w-full justify-center items-center pt-20 p-2">
-        <div className="w-full md:w-[80%] lg:w-[480px] h-[350px] rounded-3xl border-2 border-solid border-textBase/25 p-5 overflow-auto">
+      <div className="flex flex-col lg:flex-row gap-10 w-full justify-center pt-20 p-2">
+        <div className="w-full lg:w-[480px] h-[350px] rounded-3xl border-2 border-solid border-textBase/25 p-5 overflow-auto">
             <p className="text-2xl font-light text-center text-textBase/85 dark:text-textBase/65">Frontend Development</p>
             <div className="grid grid-cols-2 gap-5 mt-5 px-4">
               {skills
@@ -25,10 +25,11 @@ function Experience() {
                       {
                       skill.name==="TailwindCSS"
                         ?
-                        <img src={skill.imageUrl} alt={skill.name} className="w-7 h-7 md:w-6 md:h-6 object-contain xs:scale-150 sm-xs:scale-100" />
+                        <img src={skill.imageUrl} alt={skill.name} className="w-7 h-7 md:w-6 md:h-6 object-contain scale-125 sm:scale-100" />
                         :
                         <img src={skill.imageUrl} alt={skill.name} className="w-7 h-7 md:w-6 md:h-6 object-contain" />
-                      }                    </div>
+                      }
+                    </div>
                     <div className="flex-col p-2 gap-1">
                       <p className="text-sm font-medium text-textBase/85">{skill.name}</p>
                       <p className="text-xs font-light text-textSecondary/50 dark:text-textSecondary/25">{skill.level}</p>
@@ -39,8 +40,8 @@ function Experience() {
             </div>
         </div>
 
-        <div className="w-full md:w-[80%] lg:w-[480px] h-[350px] rounded-3xl border-2 border-solid border-textBase/25 p-5 overflow-auto">
-            <p className="text-2xl font-light text-center text-textBase/85 dark:text-textBase/65">Backend Development and Cloud</p>
+        <div className="w-full lg:w-[480px] h-[350px] rounded-3xl border-2 border-solid border-textBase/25 p-5 overflow-auto">
+            <p className="text-2xl font-light text-center text-textBase/85 dark:text-textBase/65">Backend Development</p>
             <div className="grid grid-cols-2 gap-4 mt-5 px-4">
               {skills
                 .filter((skill) => skill.type.toLowerCase() === "backend")
@@ -62,8 +63,8 @@ function Experience() {
         
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-10 w-full justify-center items-center mt-5 md:mt-10 p-2">
-        <div className="w-full md:w-[80%] lg:w-[480px] h-[350px] rounded-3xl border-2 border-solid border-textBase/25 p-5 overflow-auto">
+      <div className="flex flex-col lg:flex-row gap-10 w-full justify-center mt-5 md:mt-10 p-2">
+        <div className="w-full lg:w-[480px] h-[350px] rounded-3xl border-2 border-solid border-textBase/25 p-5 overflow-auto">
             <p className="text-2xl font-light text-center text-textBase/85 dark:text-textBase/65">DataBase and Version Control</p>
             <div className="grid grid-cols-2 gap-4 mt-5 px-4">
               {skills
@@ -85,7 +86,7 @@ function Experience() {
             </div>
         </div>
 
-        <div className="w-full md:w-[80%] lg:w-[480px] h-[350px] rounded-3xl border-2 border-solid border-textBase/25 p-5 overflow-auto">
+        <div className="w-full lg:w-[480px] h-[350px] rounded-3xl border-2 border-solid border-textBase/25 p-5 overflow-auto">
             <p className="text-2xl font-light text-center text-textBase/85 dark:text-textBase/65">Extra Programming Languages</p>
             <div className="grid grid-cols-2 gap-4 mt-5 px-4">
               {skills

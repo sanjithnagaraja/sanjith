@@ -35,21 +35,9 @@ import gmail from './gmail.svg';
 import electron from './electron.svg';
 import threejs from './threejs.svg';
 import mail from './mail.svg';
-import mysql from './mysql.svg';
-import php from './php.svg';
-import angular from './angular.svg';
-import aws from './aws.svg';
-import vercel from './vercel.svg';
-import gsap from './gsap.svg';
-import postman from './postman.svg';
 
 
 export {
-    postman,
-    gsap,
-    vercel,
-    angular,
-    aws,
     mail,
     threejs,
     gmail,
@@ -61,9 +49,7 @@ export {
     python,
     css,
     express,
-    php,
     git,
-    mysql,
     github,
     html,
     javascript,
