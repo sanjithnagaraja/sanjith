@@ -10,6 +10,8 @@ import Portfolio1 from '../assets/projects/portfolio.png'
 import posSystem from '../assets/projects/posgif.gif'
 import mernEC from '../assets/projects/mernECgif.gif'
 import gobigif from '../assets/projects/gobigif.gif'
+import modeling from '../assets/projects/3dgif.gif'
+import portfolio from '../assets/projects/127-.gif'
 
 
 function Projects() {
@@ -41,7 +43,7 @@ const projects = [
   {
     title: ["React & Three.js", "3D  Portfolio"],
     description: "🌐 A dynamic portfolio built using React and Three.js. Features 3D models, animations, and camera movement to present web dev skills in an engaging way. Optimized for desktop, mobile, and responsive screen sizes.",
-    image: Portfolio1,
+    image: modeling,
     tech: [react, threejs],
     links: {
       video: "https://github.com/player127-monster/portfolio",
@@ -63,7 +65,7 @@ const projects = [
   {
     title: ["React & Tailwind CSS", "Personal Portfolio"],
     description: "🧑‍💻 A clean developer portfolio with React and Tailwind CSS. Includes light/dark mode, scroll-based sections, responsive layout, and EmailJS integration — styled using a minimal palette with focus on UI clarity.",
-    image: Portfolio1,
+    image: portfolio,
     tech: [react, tailwindcss],
     links: {
       video: "https://your-website-link.com/react-portfolio",
